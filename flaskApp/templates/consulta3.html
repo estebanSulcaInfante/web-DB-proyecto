@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+  <title>Consulta 3</title>
+</head>
+<body>
+  {% extends 'base.html' %}
+
+{% block content %}
+<h2>Consulta 3: Uso y Costo de Materia Prima</h2>
+<h1>Resultados de la Consulta 3</h1>
+<table>
+  <tr>
+    <th>Código</th>
+    <th>Nombre</th>
+    <th>Stock</th>
+    <th>Cant.Utilizada</th>
+    <!-- Otros encabezados de columna según tus datos -->
+  </tr>
+  {% for fila in resultados %}
+    <tr>
+      <td>{{ fila[0] }}</td>
+      <td>{{ fila[1] }}</td>
+      <td>{{ fila[2] }}</td>
+      <td>{{ fila[3] }}</td>
+      <!-- Otros datos de fila según tus datos -->
+    </tr>
+  {% endfor %}
+</table>
+
+{% endblock %}
+
+  
+</body>
+</html>
